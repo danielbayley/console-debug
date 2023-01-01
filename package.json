@@ -1,0 +1,32 @@
+{
+  "name": "console-debug",
+  "version": "0.1.0",
+  "description": "A better console.debug.",
+  "keywords": [
+    "node",
+    "env",
+    "environment",
+    "development",
+    "dev",
+    "console",
+    "debug",
+    "debugger"
+  ],
+  "homepage": "https://github.com/danielbayley/console-debug#readme",
+  "repository": "danielbayley/console-debug",
+  "bugs": "https://github.com/danielbayley/console-debug/issues",
+  "author": {
+    "name": "Daniel Bayley",
+    "email": "daniel.bayley@me.com",
+    "url": "github.com/danielbayley"
+  },
+  "license": "MIT",
+  "type": "module",
+  "exports": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "engines": {
+    "node": ">=14.16"
+  }
+}
