@@ -5,6 +5,7 @@ A better `console`[`.debug`]. Only logs if:
 * A `DEBUG` [environment variable] is set
 * [`NODE_ENV`] is set to `development`
 * `--debug` or [`--inspect`] is passed on the command line, including [`npm`][][`_lifecycle_`][][`script`s]
+* Running in a GitHub [Actions] environment with [`ACTIONS_STEP_DEBUG`] enabled
 
 Install
 -------
@@ -42,6 +43,9 @@ License
 [`npm`]:                    https://npmjs.com
 [`_lifecycle_`]:            https://docs.npmjs.com/cli/v9/using-npm/scripts#current-lifecycle-event
 [`script`s]:                https://docs.npmjs.com/cli/v9/using-npm/scripts
+
+[actions]:                  https://github.com/features/actions
+[`ACTIONS_STEP_DEBUG`]:     https://docs.github.com/actions/monitoring-and-troubleshooting-workflows/enabling-debug-logging
 
 [node]:                     https://nodejs.org
 [requires]:                 https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines
