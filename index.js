@@ -1,4 +1,8 @@
-const debug = process.env.DEBUG || process.env.NODE_ENV === 'development'
+import { env, argv, execArgv } from 'node:process'
+
+const debug = env.DEBUG
+  || env.NODE_ENV === 'development'
+  || [ ...argv, ...execArgv ].includes(`--debug`)
 
 const console = { ...global.console }
 

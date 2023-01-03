@@ -4,6 +4,7 @@ A better `console`[`.debug`]. Only logs if:
 
 * A `DEBUG` [environment variable] is set
 * [`NODE_ENV`] is set to `development`
+* The `--debug` flag is passed on the command line
 
 Install
 -------
