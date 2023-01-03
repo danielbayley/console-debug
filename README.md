@@ -1,6 +1,9 @@
 [`console`]`.debug`
 ===================
-A better `console`[`.debug`]. Only logs if a `DEBUG` [environment variable] is set.
+A better `console`[`.debug`]. Only logs if:
+
+* A `DEBUG` [environment variable] is set
+* [`NODE_ENV`] is set to `development`
 
 Install
 -------
@@ -32,6 +35,8 @@ License
 [`.debug`]:                 https://developer.mozilla.org/docs/Web/API/console/debug
 
 [environment variable]:     https://wikipedia.org/wiki/Environment_variable
+[`NODE_ENV`]:               https://nodejs.dev/en/learn/nodejs-the-difference-between-development-and-production
+
 
 [node]:                     https://nodejs.org
 [requires]:                 https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines
