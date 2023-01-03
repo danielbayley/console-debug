@@ -12,4 +12,4 @@ else console.debug = (...args) => {
   if (debug) global.console.debug.apply(this, args)
 }
 
-export {console}
+export { console, debug }

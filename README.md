@@ -7,6 +7,8 @@ A better `console`[`.debug`]. Only logs if:
 * `--debug` or [`--inspect`] is passed on the command line, including [`npm`][][`_lifecycle_`][][`script`s]
 * Running in a GitHub [Actions] environment with [`ACTIONS_STEP_DEBUG`] enabled
 
+Also `export`s the `debug` conditional with these checks.
+
 Install
 -------
 ~~~ sh
@@ -23,7 +25,7 @@ This package is _[ESM]_ [only], and so [requires] _[Node]_ [`>=`]
 ~~~
 ~~~ js
 //const {console} = require('console-debug')
-import {console} from 'console-debug'
+import { console, debug } from 'console-debug'
 ~~~
 
 License
