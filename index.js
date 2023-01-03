@@ -2,7 +2,7 @@ import { env, argv, execArgv } from 'node:process'
 
 const debug = env.DEBUG
   || env.NODE_ENV === 'development'
-  || [ ...argv, ...execArgv ].includes(`--debug`)
+  || [ ...argv, ...execArgv ].some(flag => [`--debug`, `--inspect`].includes(flag))
 
 const console = { ...global.console }
 

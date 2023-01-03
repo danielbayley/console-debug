@@ -4,7 +4,7 @@ A better `console`[`.debug`]. Only logs if:
 
 * A `DEBUG` [environment variable] is set
 * [`NODE_ENV`] is set to `development`
-* The `--debug` flag is passed on the command line
+* `--debug` or [`--inspect`] is passed on the command line
 
 Install
 -------
@@ -37,7 +37,7 @@ License
 
 [environment variable]:     https://wikipedia.org/wiki/Environment_variable
 [`NODE_ENV`]:               https://nodejs.dev/en/learn/nodejs-the-difference-between-development-and-production
-
+[`--inspect`]:              https://nodejs.org/en/docs/guides/debugging-getting-started#enable-inspector
 
 [node]:                     https://nodejs.org
 [requires]:                 https://docs.npmjs.com/cli/v9/configuring-npm/package-json#engines
