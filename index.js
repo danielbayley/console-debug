@@ -1,15 +1,19 @@
-import { env, argv, execArgv } from 'node:process'
+import { env, argv, execArgv } from "node:process"
 
-const debug = env.DEBUG
-  || env.NODE_ENV === 'development'
+export const debug = "DEBUG" in env
+  || "ACTIONS_STEP_DEBUG" in env
+  || env.NODE_ENV === "development"
   || /--(debug|inspect)/.test([ ...argv, ...execArgv ] + env.npm_lifecycle_script)
-  || env.GITHUB_ACTIONS && env.ACTIONS_STEP_DEBUG
 
-const console = { ...global.console }
-
-if (this?.window) console.debug.bind(window.console)
-else console.debug = (...args) => {
-  if (debug) global.console.debug.apply(this, args)
+export const console = {
+  ...globalThis.console,
+  debug: (...args) => debug && globalThis.console.debug.apply(this, args.map(arg =>
+    _private.github.filter(arg) ? _private.github.format(arg) : arg))
 }
 
-export { console, debug }
+export const _private = {
+  github: {
+    filter: arg => "GITHUB_ACTIONS" in env && typeof arg === "string",
+    format: message => `::debug::${message}`
+  }
+}
